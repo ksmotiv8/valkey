@@ -1,0 +1,8 @@
+language = "c"
+test_command = "./runtest"
+# Valkey also has native C unit tests (src/unit/, run via ./src/valkey-unit-tests)
+# added in Valkey 8 — likely the better oracle surface if/when a C language row lands.
+setup_command = "make -j2"
+worker_image = "gcc:14-bookworm@sha256:5e927c284bf55a7dc796262e311a0703344f62f41f5621eb56843111b1d37e15"
+# This checkout is a fork; merged pull requests are the record of the UPSTREAM repository.
+repo = "valkey-io/valkey"
